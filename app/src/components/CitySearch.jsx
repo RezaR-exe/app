@@ -11,9 +11,19 @@ function CitySearch() {
 
 
     const handleCityNameConverter = async (cityName) => {
-        const nameConverter = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`)
-        const neededData = nameConverter.data.length === 0 ? "" : {lat: nameConverter.data[0].lat, lon: nameConverter.data[0].lon}
-        return neededData;
+        try {
+            const nameConverter = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${API_KEY}`)
+            const neededData = nameConverter.data.length === 0 ? "" : {lat: nameConverter.data[0].lat, lon: nameConverter.data[0].lon}
+            return neededData;
+        } catch(err) {
+            if (err.response) {
+                console.error('Status:', err.response.status);
+                console.error('Data:', err.response.data);
+              } else {
+                console.error('Error:', err.message);
+              }
+        }
+
     }
 
     const handleSearchInput = (event) => {

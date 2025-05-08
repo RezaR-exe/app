@@ -6,7 +6,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 function CityResultChart() {
     const [weatherData, setWeatherData] = useState([]);
     const cityData = useSelector((state) => state.city.data);
-
+    const message = cityData === false ? <h2>Could not find city, please check spelling or try again later</h2> : ""
 
     useEffect(() => {
         const newDataArray = [];
@@ -25,7 +25,7 @@ function CityResultChart() {
 
     const chartRender = (
     <div style={{ width: "100%", height: 300 }}>
-        {cityData.city ? <h2>Here's the weather information for {cityData.city.name} city: </h2> : <h2>Couldn't find the specified city, please watch for typos or try again later.</h2>}
+        <h2>Here's the weather information for {cityData.city?.name} city: </h2>
         <ResponsiveContainer>
             <LineChart data={weatherData}>
                 <CartesianGrid strokeDasharray="3 3" />
@@ -43,6 +43,7 @@ function CityResultChart() {
     return(
         <div>
             {typeof cityData === "object" && cityData !== null && !Array.isArray(cityData) ? chartRender : ""}
+            {message}    
         </div>
     )
 }
