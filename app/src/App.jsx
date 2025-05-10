@@ -1,12 +1,13 @@
 import CitySearch from "./components/CitySearch";
 import CityResultChart from "./components/CityResultChart";
+import Nav from "./components/Nav";
 
 
 function App() {
 
     return(
         <div>
-            <h1>Welcome to City Weather Searcher:</h1>
+            <Nav />
             <CitySearch />
             <CityResultChart />
         </div>

@@ -41,7 +41,7 @@ function CityResultChart() {
     )
 
     return(
-        <div>
+        <div className="results-container">
             {typeof cityData === "object" && cityData !== null && !Array.isArray(cityData) ? chartRender : ""}
             {message}    
         </div>

@@ -23,7 +23,6 @@ function CitySearch() {
                 console.error('Error:', err.message);
               }
         }
-
     }
 
     const handleSearchInput = (event) => {
@@ -38,11 +37,11 @@ function CitySearch() {
     };
 
     return(
-        <div>
+        <div className="search-container">
             <h1>Search for city:</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" onChange={handleSearchInput} value={searchInput} />
-                <button>Submit</button>
+                <button className="btn">Submit</button>
             </form>
         </div>
     )

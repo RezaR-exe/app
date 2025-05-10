@@ -1,0 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    display: flex;
+    border: 1px solid #1573EE;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    background-color: #1573EE;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.results-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+.btn {
+    border: 1px solid #1573EE;
+    background-color: #1573EE;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+}
