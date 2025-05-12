@@ -7,6 +7,3 @@ How it works:
 
 This little project was done using React, Redux Toolkit, Axios and Recharts.
 The API used is from https://openweathermap.org/forecast5.
-
-UI is not implemented as of now, will implement it in the future.
-
