@@ -7,3 +7,5 @@ How it works:
 
 This little project was done using React, Redux Toolkit, Axios and Recharts.
 The API used is from https://openweathermap.org/forecast5.
+
+The app is deployed and can be accsessed at https://remarkable-torrone-a96953.netlify.app/
